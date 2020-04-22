@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>PAYMENT PAGE</title>
+    <link rel="stylesheet" type="text/css" href="payment.css">
+    </head>
+<body>
+    
+    <h5>PAYMENT MODE: CARD</h5>
+    <div>Total items selected :<span id="jj"></span></div>
+    <br>
+    <div id="amt">Amount to be paid :<span id="amnt"></span></div>
+    <form id="form">
+        Card number:<br>
+        <input width="100" type="text" required=""><br><br>
+        <label for="expirydate">Expiry date:<br></label>
+        <input type="month" id="expirydate" name="expirydate" placeholder="mm/yyyy" required=""><br><br>
+        CVV:<br><input type="text" required=""><br><br>
+        Name on card:<br><input type="text" required=""><br><br>
+        <button onclick="pay();">PAY</button>
+    </form>
+    <script>
+        document.getElementById("amnt").innerHTML=localStorage.getItem("textvalue"); 
+        document.getElementById("jj").innerHTML=localStorage.getItem("a"); 
+        function pay(){
+            alert("PAYMENT SUCCESSFUL!!It will be delivered in 3-4 business days");
+            window.location='index.html';
+        }
+    </script>
+    </body>
+</html>

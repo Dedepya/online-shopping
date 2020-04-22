@@ -1,0 +1,23 @@
+.online{
+	margin-left: 55%;
+	margin-top:10%;
+}
+.submit{
+	background-color: ;
+	margin-left: 10%;
+}
+body{
+	background-image: url("girl.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+p{
+
+font-size:16px;
+
+font-family:  Verdana,Geneva,sans-serif;
+}
+.navaneeth{
+	font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
+	font-size:16px;
+}

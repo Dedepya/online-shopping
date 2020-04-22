@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selecting  westernwear</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+</head>
+<style >
+  body{
+    background: gray;
+
+  }
+  .header{
+      width:100%;
+      height:100px;
+      background-color:black;
+    }
+    #price{
+      color:white;
+      float: right;
+      padding:30px;
+    }
+    #select{
+      color:white;
+      float: right;
+      padding:30px;
+    }
+    #atc{
+      color:white;
+      float: right;
+      padding:30px;
+    }
+       #pay{
+            color: white;
+            float: right;
+            padding:30px;
+            margin-top: 16px;
+            margin-right:240px;
+        }
+        a{
+        	text-decoration-line: none;
+        }
+  table{
+    width:1200px;
+    margin:auto;
+    table-layout: fixed;
+    text-align: center;
+    margin-top:50px;
+    font-family: Arial;
+
+  }
+  table,th,td{
+    border:3px dotted white;
+    border-collapse: collapse;
+    padding:40px;
+    font-size: 20px;
+  }
+  #back{
+      color:white;
+      float: left;
+      padding:30px;
+      text-decoration-line: none;
+    }
+
+</style>
+<body>
+  <div class="header">
+        <a href="index.html" id="back">Back</a>
+    <p id="price">total price=0</p>
+    <p id="select">selected items=0</p>
+    <p id="atc">items added to cart=0</p>
+        <a id="pay" href="pay.html" target="_blank" onclick="passvalue();">Procced to Payment</a>
+  </div>
+  <table>
+		<tr>
+			<td>
+				<img src="kd1.jpg">
+				
+				<p class="prices" data_value="100">100$</p>
+				<button onclick="adcart();">select</button>
+				<button onclick="cart();">Add to cart</button>
+				
+
+			
+			</td>
+
+			<td>
+				<img src="kd2.jpg">
+			
+				<p class="prices" data_value="100">100$</p>
+				<button onclick="adcart();">select</button>
+				<button onclick="cart();">Add to cart</button>
+			
+				
+			</td>
+			<td>
+				<img src="kd3.jpg">
+			
+				<p class="prices" data_value="100">100$</p>
+				<button onclick="adcart();">select</button>
+				<button onclick="cart();">Add to cart</button>
+				</td>
+			<td>
+				<img src="kd4.jpg">
+				
+				<p class="prices" data_value="100">100$</p>
+				<button onclick="adcart();">select</button>
+				<button onclick="cart();">Add to cart</button>
+			</td>
+		</tr>
+		<tr>
+			<td> 
+				<img src="kd5.jpg">
+				
+
+ 				<p class="prices" data_value="100">100$</p>
+				<button onclick="adcart();">select</button>
+				<button onclick="cart();">Add to cart</button>
+ 			</td>
+			<td>
+				<img src="kd6.jpg">
+				
+
+                 <p class="prices" data_value="100">100$</p>
+				<button onclick="adcart();">select</button>
+				<button onclick="cart();">Add to cart</button>
+             </td>
+			<td>
+				<img src="kd7.jpg">
+				
+
+				<p class="prices" data_value="100">100$</p>
+				<button onclick="adcart();">select</button>
+				<button onclick="cart();">Add to cart</button>
+			</td>
+			<td>
+				<img src="kd8.jpg">
+				
+
+				<p class="prices" data_value="100">100$</p>
+				<button onclick="adcart();">select</button>
+				<button onclick="cart();">Add to cart</button>
+			</td>
+		</tr>
+	</table><script type="text/javascript">
+      var prices=$(".prices").attr("data_value");
+      var i=0;
+      var j=0;
+      function adcart(){
+        i++;
+         localStorage.setItem("a",i);
+        document.getElementById("price").innerHTML="total price="+i*prices;
+                localStorage.setItem("textvalue",i*prices);
+      }
+      function cart() {
+        j++;
+      }
+      $("button").click(function(){
+        document.getElementById("atc").innerHTML="items added to cart="+j;
+      });
+      $("button").click(function(){
+        document.getElementById("select").innerHTML="selected items="+i;
+      });
+       
+
+    </script>
+
+
+
+</body>
+</html>
